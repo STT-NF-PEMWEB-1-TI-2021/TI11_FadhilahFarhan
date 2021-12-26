@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penjumlahan 2 Bilangan</title>
+</head>
+
+<body style="margin: 1rem;">
+    <input type="text" id="bilangan1" onchange="penjumlahan()">
+    <h1>+</h1>
+    <input type="text" id="bilangan2" onchange="penjumlahan()">
+    <h1>=</h1>
+    <input type="text" id="hasilnya">
+
+    <script>
+        function penjumlahan() {
+            let bilangan1 = Number(document.getElementById("bilangan1").value);
+            let bilangan2 = Number(document.getElementById("bilangan2").value);
+            let hasil = bilangan1 + bilangan2;
+            document.getElementById("hasilnya").value = hasil;
+        }
+    </script>
+</body>
+
+</html>

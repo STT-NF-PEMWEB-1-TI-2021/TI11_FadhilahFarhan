@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs</title>
+    <style>
+        .d1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        button {
+            margin: 10px 32%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function kurs() {
+            let dollar = document.getElementById("usd").value;
+            let hasil = dollar * 14650;
+            document.getElementById("rupiah").value = hasil;
+        }
+    </script>
+    <div class="d1">
+        <div>
+            <table>
+                <tr>
+                    <td>USD</td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="1" id="usd"></td>
+                </tr>
+            </table>
+            <button id="convert" onclick="kurs()">Convert To</button>
+            <table>
+                <tr>
+                    <td>Rupiah</td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="14650" id="rupiah"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

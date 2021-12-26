@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkir</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 1rem;
+        }
+
+        h2 {
+            margin-bottom: 1em;
+        }
+
+        input {
+            margin-bottom: 1em;
+        }
+
+        button {
+            margin-bottom: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function parkir() {
+            let masuk = document.getElementById("in").value;
+            let keluar = document.getElementById("out").value;
+            let selisihnya = keluar - masuk;
+            let biaya = 0;
+            const tarifAwal = 3000;
+            const tarifPerJam = 1000;
+            if (selisihnya <= 2) {
+                biaya = tarifAwal;
+            }
+            else {
+                let tambahJam = selisihnya - 2
+                biaya = tarifAwal + (tarifPerJam * tambahJam)
+            }
+            let hasil = document.getElementById("hasil");
+            hasil.innerHTML = biaya;
+        }
+    </script>
+
+    <h2>Menghitung Biaya Parkir</h2>
+    <p>Masuk Parkir</p><input type="number" id="in"><br>
+    <p>Keluar Parkir</p><input type="number" id="out"><br>
+    <button onclick="parkir()">Cek Biaya Parkir</button><br>
+    <p>Biaya Parkir : <span id="hasil"></span></p>
+</body>
+
+</html>
